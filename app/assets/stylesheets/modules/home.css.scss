@@ -1,0 +1,35 @@
+#home {
+  .img {
+    @include back-img("logo_big.png", 296px, 206px);
+    margin: 0 auto;
+  }
+
+  .title {
+    @extend .title;
+    margin-top: 52px;
+  }
+}
+  #about-company {
+    @include column(12);
+    @include margin-leader(3);
+    background-color: $orange;
+    border-bottom: 2px solid $olive;
+
+    .img {
+      @include back-img("work_photo.jpg", auto, 430px);
+      @include column(8);
+      margin: 0 -2px;
+      background-size: cover;
+      float: left;
+    }
+
+    .description {
+      @include column(4);
+      text-align: left;
+      padding: 20px 10px;
+      color: white;
+      float: right;
+      font-size: 22px;
+      line-height: 1.2em;
+    }
+  }

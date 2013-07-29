@@ -1,0 +1,102 @@
+#js-course {
+  .title {
+    @extend .orange-title;
+    @include margin-trailer(3, 40px);
+  }
+
+  .text-block-left {
+    @extend .text-block-left;
+    min-height: 515px;
+    padding: 30px 35px 24px 40px;
+  }
+
+  .text-block-right {
+    @extend .text-block-right;
+    min-height: 610px;
+    padding: 30px 40px 30px 47px;
+
+    &:before {
+      content: "";
+      @include square($olive);
+      bottom: -106px;
+      left: 0px;
+    }
+    &:after {
+      content: "";
+      @include square($olive);
+      bottom: -210px;
+      left: 0px;
+    }
+  }
+
+  .violett-block {
+    min-height: 300px;
+    @include text-box(6, white, $purple, bottom, #0cf389, left);
+    margin: 4px -2px 0;
+    padding: 15px 45px;
+
+    .head {
+      text-align: left;
+      font-size: 25px;
+      line-height: 1em;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 25px;
+
+      tr {
+        display: block;
+        margin: 10px 0;
+
+        .left {
+          width: 85px;
+          font-size: 25px;
+          line-height: 1em;
+        }
+
+        .right{
+          width: 250px;
+          height: 40px;
+
+          .field {
+            text-align: right;
+          }
+
+          .radio {
+            margin: 0px;
+            @include inline-block;
+          }
+
+          .label {
+            @include inline-block;
+            margin: 0 5px;
+            font-size: 20px;
+            line-height: 1em;
+          }
+
+          .submit {
+            @extend .button;
+            display: block;
+            float:right;
+          }
+
+          .text-field {
+            @extend .text-field;
+            display: block;
+            float:right;
+          }
+        }
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      @include back-img("orange_squares_2.png", 206px, 206px);
+      left: -106px;
+      bottom: -106px;
+    }
+  }
+}

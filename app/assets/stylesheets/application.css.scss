@@ -1,0 +1,20 @@
+@import "compass";
+@include global-reset;
+@import "foundation-grid";
+@import "fonts";
+@import "mixins";
+
+
+$base-font-size: 14px;
+$base-line-height: 20px;
+@include establish-baseline;
+
+$orange: #e05d41;
+$blue: #9189ff;
+$sky-blue: #a0ddf3;
+$olive: #7aa700;
+$purple: #7500a7;
+
+@import "layout";
+@import "modules/*";
+@import "components/*";

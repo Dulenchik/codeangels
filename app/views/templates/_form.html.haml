@@ -1,0 +1,19 @@
+.head= "Participation request"
+%table
+  %tr
+    %td.left= label_tag 'name', 'Name', class: "label"
+    %td.right= text_field_tag 'name', nil, class: "text-field"
+  %tr
+    %td.left= label_tag 'email', 'Email', class: "label"
+    %td.right= text_field_tag 'email', nil, class: "text-field"
+  %tr
+    %td.left
+    %td.right
+      .field
+        =radio_button_tag 'city', 'kiev', true, class: "radio"
+        = label_tag 'city_kiev', 'Kiev', class: "label"
+        =radio_button_tag 'city', 'dnipro', false, class: "radio"
+        = label_tag 'city_dnipro', "Dnipropetrovs'k", class: "label"
+  %tr
+    %td.left
+    %td.right= button_tag 'Send', class: "submit"

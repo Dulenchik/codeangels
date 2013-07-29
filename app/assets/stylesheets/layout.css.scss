@@ -1,0 +1,73 @@
+body{
+  background-image: image-url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center 60px;
+  background-size: 100% auto;
+  background-color: $sky-blue;
+  font-family: "Raleway", helvetica;
+  overflow-x: hidden;
+  font-weight: 200;
+}
+
+  header {
+    background-color: $blue;
+    border-bottom: 3px solid $orange;
+
+    .wrapper {
+      @include outerRow;
+    }
+  }
+
+      #small_logo {
+        @include column(4);
+
+        .img {
+          @include back-img("logo.png", 195px, 41px, left);
+          margin: 10px 0 6px 8px;
+        }
+      }
+
+      #menu {
+        @include column(8);
+      }
+
+  #content { text-align: center; }
+    #home { 
+      @include outerRow;
+      @include margin-leader(3);
+      @include margin-trailer(3); 
+    }
+
+    #ror-course {
+      @include outerRow;
+      @include margin-trailer(5); 
+    }
+
+    #js-course {
+      @include outerRow;
+      @include margin-trailer(9); 
+    }
+
+    #coaches {
+      @include outerRow;
+      @include margin-trailer(6);
+    }
+
+  footer {
+    @include box-sizing(border-box);
+    height: 95px;
+    border-top: 2px solid $orange;
+    width: 100%;
+    background-color: $olive;
+    padding: 10px;
+    color: #0acc72;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 3em;
+      #contact {
+        float: left;
+      }
+      #copyright {
+        float: right;
+      }
+  }

@@ -1,0 +1,19 @@
+.button {
+  @include box-sizing(border-box);
+  background-color: #0cf389;
+  width: 125px;
+  height: 40px;
+  font-size: 25px;
+  line-height: 40px;
+  color: $purple;
+  border: none;
+  margin: 0;
+
+  &:hover, &:active {
+    border-bottom: 2px solid $orange;
+  }
+
+  &:active {
+    background-color: #0acc72;
+  }
+}

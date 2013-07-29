@@ -1,0 +1,17 @@
+.text-field {
+  @include box-sizing(border-box);
+  width: 250px;
+  background-color: white;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #c6aad9;
+  padding: 0 13px;
+  font-size: 25px;
+  line-height: 1em;
+  border-bottom: 3px solid white;
+
+  &:focus {
+    border-bottom: 3px solid #0cf389;
+  }
+}

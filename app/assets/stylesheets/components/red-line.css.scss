@@ -1,0 +1,8 @@
+.red-line {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: $orange;
+  box-shadow: 0 0 1px 0 red;
+  bottom: 16px;
+}

@@ -1,0 +1,24 @@
+.title {
+  font-size: 40px;
+  line-height: 1em;
+  display: inline-block;
+  font-weight: normal;
+}
+
+.orange-title {
+  @extend .title;
+  color: $orange;
+  position: relative;
+
+  &:before {
+    @extend .red-line;
+    left: -323px;
+    width: 325px;
+  }
+
+  &:after {
+    @extend .red-line;
+    right: -323px;
+    width: 325px;
+  }
+}

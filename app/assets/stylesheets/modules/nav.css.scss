@@ -1,0 +1,30 @@
+nav {
+  float: right;
+  @include pie-clearfix;
+  a {
+    @include inline-block;
+    padding: 0 30px;
+    color: #333;
+    border-bottom: none;
+    text-decoration: none;
+    @include padding-leader;
+    @include padding-trailer;
+    margin: 0 -4px;
+    position: relative;
+
+    &:hover, &.active{
+      color: white;
+      background-color: $orange;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -2px;
+        width: 100%;
+        left: 0;
+        height: 3px;
+        background-color: $blue;
+      }
+    }
+  }
+}

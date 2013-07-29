@@ -1,0 +1,57 @@
+#ror-course {
+  .title {
+    @extend .orange-title;
+    @include margin-trailer(3, 40px);
+  }
+
+  .text-block-left {
+    @extend .text-block-left;
+    min-height: 475px;
+    padding: 30px 35px 33px 41px;
+  }
+
+  .text-block-right {
+    @extend .text-block-right;
+    min-height: 660px;
+    padding: 30px 40px 65px 32px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      @include back-img("orange_squares_1.png", 205px, 205px);
+      right: -210px;
+      top: 0px;
+    }
+  }
+
+  .apply {
+    @include text-box(6, white, $purple, bottom, #0cf389, left);
+    height: 180px;
+    margin: 5px -2px 0;
+
+    a {
+      display: block;
+      @include box-sizing(border-box);
+      background: image-url("plus.png") no-repeat center;
+      color: white;
+      position: relative;
+      height: 100%;
+
+      &:before{
+        content: "Apply";
+        font-size: 25px;
+        position: absolute;
+        font-weight: bold;
+        left: 40px;
+        top: 20px;
+      }
+    }
+
+    &:before {
+      content: "";
+      @include square($orange);
+      left: -104px;
+      bottom: 0px;      
+    }
+  }
+}

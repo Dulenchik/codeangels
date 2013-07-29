@@ -1,0 +1,22 @@
+@mixin back-img($path, $width: auto, $height: auto, $position: center) {
+  background-image: image-url($path);
+  min-width: $width;
+  min-height: $height;
+  background-repeat: no-repeat;
+  background-position: $position;
+}
+
+@mixin text-box($column, $color, $back-color, $border, $border-color, $float) {
+  @include column($column);
+  color: $color;
+  background-color: $back-color;
+  border-#{ $border }: 2px solid $border-color;
+  float: $float;
+}
+
+@mixin square($color) {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  background-color: $color;
+}

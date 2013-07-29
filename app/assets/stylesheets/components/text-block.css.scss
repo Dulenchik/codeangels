@@ -1,0 +1,28 @@
+.text-block {
+  font-size: 20px;
+  line-height: 1.2em;
+  margin: 0 -2px;
+  text-align: left;
+}
+
+.text-block-left {
+  @extend .text-block;
+  @include text-box(6, #232d3b, $olive, bottom, $orange, left);
+  line-height: 1.35em;
+}
+
+.text-block-right {
+  @extend .text-block;
+  @include text-box(6, white, $orange, bottom, $olive, right);
+
+  ul {
+    margin-top: 40px;
+    line-height: 1.5em;
+    list-style: none;
+
+    li:before {
+      content: "> ";
+      padding-left: 35px;
+    }
+  }
+}
