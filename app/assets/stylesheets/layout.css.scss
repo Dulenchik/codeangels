@@ -7,6 +7,7 @@ body{
   font-family: "Raleway", helvetica;
   overflow-x: hidden;
   font-weight: 200;
+  outline: none;
 }
 
   header {
@@ -60,7 +61,7 @@ body{
     width: 100%;
     background-color: $olive;
     padding: 10px;
-    color: #0acc72;
+    color: white;
     font-weight: bold;
     font-size: 25px;
     line-height: 3em;
