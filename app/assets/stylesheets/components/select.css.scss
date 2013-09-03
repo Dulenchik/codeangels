@@ -10,6 +10,7 @@
     padding: 0 20px 0 15px;
     @include adjust-font-size-to($option-font-size, 2);
     overflow: hidden;
+    border: none;
   }
 
   .icon-caret-down {

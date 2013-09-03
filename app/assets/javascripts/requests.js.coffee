@@ -13,9 +13,13 @@ $ ->
     $(".list").toggle())
 
   $(".option").bind("click", ->
-    $(".select").html($(@).html())
+    text = $(@).html()
+    $("#select-value").val(text)
+    $(".select").html(text)
     $(".list").toggle())  
 
   $(".icon-caret-down").bind("click", ->
-    $(".select").html($(@).html())
+    text = $(@).html()
+    $("#select-value").val(text)
+    $(".select").html(text)
     $(".list").toggle())

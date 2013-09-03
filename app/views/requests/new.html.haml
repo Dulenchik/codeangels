@@ -71,6 +71,7 @@
       .line
         = label_tag :nil, "Какое Вы имеете отношение к сфере IT?", class: "label"
         .select-wrapper
+          = hidden_field_tag :select, nil, id: "select-value"
           .select
           .icon-caret-down
           %ul.list
@@ -81,5 +82,3 @@
 
       .line
         = submit_tag "Отправить", class: "submit"
-
-
