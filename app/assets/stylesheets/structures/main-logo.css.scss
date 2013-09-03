@@ -1,0 +1,17 @@
+.main-logo {
+  @include padding-leader(3);
+  @include padding-trailer(2.5);
+  .logo {
+    height: 220px;
+    background: image-url("big_logo.png") center top no-repeat;
+    @include margin-trailer(2);
+  }
+
+  .title {
+    text-align: center;
+    @include adjust-font-size-to($title-font-size, 2.5);
+
+    &:before { content: "<"; }
+    &:after { content: ">"; }
+  }
+}

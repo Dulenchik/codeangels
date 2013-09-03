@@ -1,0 +1,42 @@
+.footer {
+  text-align: center;
+
+  .entry {
+    position: relative;
+    display: inline-block;
+
+    .free {
+      color: $light-sky-blue;
+      @include adjust-font-size-to($large-font-size, 2);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .condition {
+      @include adjust-font-size-to($small-font-size, 2);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: -70px;
+      top: -10px;
+      width: 50px;
+      height: 100px;
+      background: image-url("olive-triangle.png") center no-repeat;
+    }
+  }
+
+  .contact-information {
+    text-align: right;
+    padding-right: 45px;
+    @include padding-leader(1.5);
+    .title {
+      @include adjust-font-size-to($large-font-size);
+      font-weight: bold;
+    }
+
+    .phone-number, .skype { @include adjust-font-size-to($medium-font-size); }
+    .phone-number span.name { font-weight: bold; color: $phone-number-name; }
+    .skype span.category { font-weight: bold; color: $skype-name; }
+  }
+}

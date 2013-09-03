@@ -1,0 +1,44 @@
+header {
+  background: $blue;
+  border-bottom: 3px solid $orange;
+  max-height: 60px;
+
+  .wrapper {
+    @include outerRow;
+
+    .logo {
+      @include column(4);
+      background: image-url("small_logo.png") left center no-repeat;
+      height: 60px;
+    }
+
+    nav {
+      @include column(8);
+      text-align: right;
+      a {
+        margin: 0 -2px;
+        @include inline-block;
+        @include padding-leader;
+        @include padding-trailer;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        &:hover, &.active {
+          background: $orange;
+          color: $white;
+          position: relative;
+
+          &:before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: $blue;
+          }
+        }
+      }
+    }
+  }
+}

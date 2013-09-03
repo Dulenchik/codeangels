@@ -1,0 +1,17 @@
+*, *:before, *:after { @include box-sizing(border-box); }
+ 
+html {
+  background: $sky-blue image-url("background.jpg") 0 60px no-repeat;
+  @include background-size(100%);
+  font-family: "Raleway", helvetica;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+}
+
+.slide {
+  @include outerRow;
+  font-family: helvetica;
+}

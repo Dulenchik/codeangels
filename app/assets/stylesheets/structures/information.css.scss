@@ -1,0 +1,13 @@
+#content .slide .information{
+  @include column(8);
+  background: $orange;
+  color: white;
+  @include padding-leader(2);
+  @include padding-trailer(1);
+  @include margin-trailer(7.5);
+  border-bottom: 3px solid $olive;
+
+  .body { @include margin-leader(2); }
+
+  .footer { @include margin-leader(2); }
+} 

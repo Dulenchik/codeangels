@@ -1,0 +1,82 @@
+.main-logo
+  .logo
+  .title= "it's about sharing knowledge"
+
+.slide
+  .information
+    .header
+      .question
+        .line= "Хочешь получить"
+        .line
+          %span.accent= "профессию "
+          = "в IT сфере?"
+
+      .answer= "Ты попал по адресу!"
+
+    .body
+      .about-conference
+        = "При поддержке "
+        %span.accent= "Codeschool" 
+        = "и" 
+        %span.accent= "RubyGarage" 
+        = "в Днепро-"
+        = "петровске"
+        %span.accent= "21 сентября"
+        = "пройдет образовательная"
+        %span.accent= "конференция" 
+        .name= "“Learn by Doing“!"
+        .logo
+          .circle
+          .picture
+
+      .about-course
+        %p
+          %span.accent= "Представители"
+          = "ведущих IT компаний Днепропетровска поделятся с нами информацией и возможностями, которые они предлагают молодым и перспективным."
+        %p
+          %span.accent= "Ты сможешь"
+          = "узнать где и как проходят бесплатные курсы, какие есть программы для стажеров и как сделать самостоятельные шаги в карьере IT."
+        .conclusion= "Приходи, узнавай, развивайся!"
+
+    .footer
+      .entry
+        .free= "вход свободный!"
+        .condition= "по предварительной регистрации"
+
+      .contact-information
+        .title= "По всем вопросам обращаться:"
+        .phone-number
+          = "+38097 262 86 24"
+          %span.name= "Юлия"
+
+        .skype
+          %span.category= "skype:"
+          = "julia_tokareva_"
+
+
+  .request-form
+    .caption= "Кто не учится - тот не шарит! :)"
+
+    = form_tag requests_path, class: "form" do
+      .title= "Регистрация:"
+
+      .line
+        = label_tag :name, "ФИО", class: "label"
+        = text_field_tag :name, nil, class: "text-field"
+
+      .line
+        = label_tag :email, "Электронный адрес", class: "label"
+        = text_field_tag :email, nil, class: "text-field"
+
+      .line
+        = label_tag :nil, "Какое Вы имеете отношение к сфере IT?", class: "label"
+        %select.select
+          %option= "работаю в IT компании"
+          %option= "учусь на IT специальности"
+          %option= "просто интересна эта сфера"
+          %option= "другое"
+
+      .line
+        = submit_tag "Отправить", class: "submit"
+
+

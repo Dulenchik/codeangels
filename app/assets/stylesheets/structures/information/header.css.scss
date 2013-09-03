@@ -1,0 +1,20 @@
+.header {
+  font-weight: bold;
+
+  .line {
+    text-align: right;
+    padding-right: 65px;
+    @include adjust-font-size-to($large-font-size, 2.2, $base-font-size);
+    
+    .accent { 
+      color: $green;
+      @include adjust-font-size-to($huge-font-size, 2.2, $large-font-size);
+    }
+  }
+
+  .answer {
+    @include leader(.5);
+    @include adjust-font-size-to($huge-font-size, 2.2, $base-font-size);
+    text-align: center;
+  }
+}
