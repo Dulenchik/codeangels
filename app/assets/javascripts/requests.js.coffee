@@ -7,4 +7,15 @@
 # });
 
 $ ->
-  $("select").sb()
+  $(".list").hide()
+
+  $(".select").bind("click", ->
+    $(".list").toggle())
+
+  $(".option").bind("click", ->
+    $(".select").html($(@).html())
+    $(".list").toggle())  
+
+  $(".icon-caret-down").bind("click", ->
+    $(".select").html($(@).html())
+    $(".list").toggle())

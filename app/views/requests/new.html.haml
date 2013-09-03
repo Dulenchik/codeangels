@@ -70,11 +70,14 @@
 
       .line
         = label_tag :nil, "Какое Вы имеете отношение к сфере IT?", class: "label"
-        %select.select
-          %option= "работаю в IT компании"
-          %option= "учусь на IT специальности"
-          %option= "просто интересна эта сфера"
-          %option= "другое"
+        .select-wrapper
+          .select
+          .icon-caret-down
+          %ul.list
+            %li.option= "работаю в IT компании"
+            %li.option= "учусь на IT специальности"
+            %li.option= "просто интересна эта сфера"
+            %li.option= "другое" 
 
       .line
         = submit_tag "Отправить", class: "submit"

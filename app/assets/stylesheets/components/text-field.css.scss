@@ -1,0 +1,14 @@
+.text-field {
+  height: 40px;
+  border: none;
+  outline: none;
+  width: 100%;
+  background: $white;
+  color: $blue;
+  padding: 0 10px 0 15px;
+  @include adjust-font-size-to($text-field-font-size, 2);
+  border-bottom: 3px $white solid;
+  font-family: helvetica;
+
+  &:focus { border-bottom: 3px $submit-green solid; }
+}

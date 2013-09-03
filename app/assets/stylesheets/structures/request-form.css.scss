@@ -49,50 +49,5 @@
       @include padding-leader(.5);
       @include padding-trailer(.5);
     }
-
-    .text-field {
-      height: 40px;
-      border: none;
-      outline: none;
-      width: 100%;
-      background: $white;
-      color: $blue;
-      padding: 0 10px 0 15px;
-      @include adjust-font-size-to($text-field-font-size, 2);
-      border-bottom: 3px $white solid;
-
-      &:focus { border-bottom: 3px $submit-green solid; }
-    }
-
-    .select {
-      height: 40px;
-      border: none;
-      outline: none;
-      width: 100%;
-      background: $white;
-      color: $blue;
-      padding-left: 15px;
-      @include adjust-font-size-to($option-font-size, 2);
-
-      option { 
-        text-align: right;
-        border: none;
-      }
-    }
-
-    .submit {
-      @include inline-block;
-      @include margin-leader(1);
-      color: $violet;
-      width: 160px;
-      height: 40px;
-      border: none;
-      background: $submit-green;
-      border-bottom: 3px $submit-green solid;
-      @include adjust-font-size-to($text-field-font-size);
-
-      &:hover, &:active { border-bottom: 3px $orange solid; }
-      &:active { background: darken($submit-green, 9%) }
-    }
   }
 }

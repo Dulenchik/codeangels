@@ -1,0 +1,39 @@
+.select-wrapper {
+  position: relative;
+  cursor: pointer;
+
+  .select {
+    height: 40px;
+    width: 100%;
+    background: $white;
+    color: $blue;
+    padding: 0 20px 0 15px;
+    @include adjust-font-size-to($option-font-size, 2);
+    overflow: hidden;
+  }
+
+  .icon-caret-down {
+    position: absolute;
+    color: $submit-green;
+    right: 10px;
+    top: 0px;
+    @include adjust-font-size-to($text-field-font-size, 2);
+  }
+
+  .list {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background: rgba($white, 0.7);
+
+    .option {
+      text-align: right;
+      @include adjust-font-size-to($option-font-size, 2);
+      color: $blue;
+      padding-right: 15px;
+
+      &:hover { background: rgba($submit-green, 0.7); }
+    }
+  }
+}

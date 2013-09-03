@@ -1,0 +1,14 @@
+.submit {
+  @include inline-block;
+  @include margin-leader(1);
+  color: $violet;
+  width: 160px;
+  height: 40px;
+  border: none;
+  background: $submit-green;
+  border-bottom: 3px $submit-green solid;
+  @include adjust-font-size-to($text-field-font-size);
+
+  &:hover, &:active { border-bottom: 3px $orange solid; }
+  &:active { background: darken($submit-green, 9%) }
+}

@@ -1,3 +1,7 @@
+/*
+*= require font-awesome
+*/
+
 @import "compass";
 @import "foundation-grid";
 @import "fonts";
@@ -8,7 +12,9 @@
 @include establish-baseline;
 @import "general";
 
-@import "components/accent";
+@import "components/submit";
+@import "components/select";
+@import "components/text-field";
 
 @import "structures/header";
 @import "structures/main-logo";
