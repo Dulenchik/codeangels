@@ -13,5 +13,5 @@ a {
 
 .slide {
   @include outerRow;
-  font-family: helvetica;
+  font-family: helvetica, arial;
 }

@@ -62,17 +62,23 @@
 
       .line
         = label_tag :name, "ФИО", class: "label"
-        = text_field_tag :name, nil, class: "text-field"
+        - if @errors[:name]
+          .error= @errors[:name]
+        = text_field_tag :name, params[:name], class: "text-field"
 
       .line
         = label_tag :email, "Электронный адрес", class: "label"
-        = text_field_tag :email, nil, class: "text-field"
+        - if @errors[:email]
+          .error= @errors[:email]
+        = text_field_tag :email, params[:email], class: "text-field"
 
       .line
         = label_tag :nil, "Какое Вы имеете отношение к сфере IT?", class: "label"
+        - if @errors[:select]
+          .error= @errors[:select]
         .select-wrapper
-          = hidden_field_tag :select, nil, id: "select-value"
-          .select
+          = hidden_field_tag :select, params[:select], id: "select-value"
+          .select= params[:select]
           .icon-caret-down
           %ul.list
             %li.option= "работаю в IT компании"

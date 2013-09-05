@@ -13,6 +13,8 @@ gem "font-awesome-rails"
 
 gem 'haml-rails'
 
+gem "letter_opener", :group => :development
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 
